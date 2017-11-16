@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainTabsActivity extends AppCompatActivity {
 
     private ArrayList<String> tabTitle = new ArrayList<>();
     private int[] unreadCount = {0, 0, 0};
