@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ToolbarIconBadgeExample</string>
+
+    <string name="title.my.invites.screen">My Invites</string>
+    <string name="title.my.friends.screen">My Friends</string>
+    <string name="title.my.groups.screen">My Groups</string>
 </resources>
