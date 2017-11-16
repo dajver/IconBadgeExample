@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/groups"
+        android:title="My Groups"
+        android:icon="@mipmap/icon_invited_users"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/panics"
+        android:title="Panics"
+        android:icon="@mipmap/icon_panic_counts"
+        app:showAsAction="always" />
+
+</menu>
