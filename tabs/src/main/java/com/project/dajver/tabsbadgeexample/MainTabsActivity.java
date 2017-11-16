@@ -57,23 +57,18 @@ public class MainTabsActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-
-    private View prepareTabView(int pos) {
-        View view = getLayoutInflater().inflate(R.layout.view_tabs_with_badge,null);
-        TextView textView = view.findViewById(R.id.title);
-        TextView countView = view.findViewById(R.id.count);
-        textView.setText(tabTitle.get(pos));
-        if(unreadCount[pos] > 0) {
-            countView.setVisibility(View.VISIBLE);
-            countView.setText(String.valueOf(unreadCount[pos]));
-        } else
-            countView.setVisibility(View.GONE);
-        return view;
-    }
-
     private void setupTabIcons() {
         for(int i = 0; i < tabTitle.size(); i++) {
-            tabLayout.getTabAt(i).setCustomView(prepareTabView(i));
+            View view = getLayoutInflater().inflate(R.layout.view_tabs_with_badge,null);
+            TextView textView = view.findViewById(R.id.title);
+            TextView countView = view.findViewById(R.id.count);
+            textView.setText(tabTitle.get(i));
+            if(unreadCount[i] > 0) {
+                countView.setVisibility(View.VISIBLE);
+                countView.setText(String.valueOf(unreadCount[i]));
+            } else
+                countView.setVisibility(View.GONE);
+            tabLayout.getTabAt(i).setCustomView(view);
         }
     }
 }
